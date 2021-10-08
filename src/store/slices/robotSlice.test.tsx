@@ -1,12 +1,9 @@
-import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 
 import { EDirection } from '../models';
 import { directions, maxY } from '../constants';
 import robotReducer, { IRobotPlacement, place, move, left, right, IAppState, report } from './robotSlice';
-import App from '../../App';
-import { Robot } from '../../robot/robot';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
