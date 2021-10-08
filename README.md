@@ -33,4 +33,4 @@ Your app is ready to be deployed!
 * React Hook Forms
 * React Bootstrap
 * Redux Toolkit
-* Redux Saga
+* Redux Thunk
