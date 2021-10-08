@@ -218,6 +218,24 @@ describe('robot reducer', () => {
     expect(actualState.robotPlacement).toEqual(expected);
   });
 
+    
+  it('should pick the direction of the previous PLACE command if the new PLACE command is missing the direction', () => {
+    const prevPlacement = initialState.robotPlacement;
+    const nextPlacement: IRobotPlacement = {
+      x: 1,
+      y: 1
+    };
+
+    const commands = [
+      place(prevPlacement),
+      place(nextPlacement)
+    ];
+
+    const finalState = executeCommands(initialState, commands);
+
+    expect(finalState.robotPlacement.direction).toEqual(prevPlacement.direction);
+  });
+
   it('should log correctly', () => {
     const commands = [
       place({ x: 0, y: 0, direction: EDirection.EAST }),

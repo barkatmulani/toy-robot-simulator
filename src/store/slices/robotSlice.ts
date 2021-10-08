@@ -38,7 +38,7 @@ export const robotSlice = createSlice({
         state.robotPlacement.x = action.payload.x;
         state.robotPlacement.y = action.payload.y;
         if (action.payload.direction) state.robotPlacement.direction = action.payload.direction;
-        state.log?.push(`PLACE ${x}, ${y} ${direction ? ',' + direction : ''}`);
+        state.log?.push(`PLACE ${x}, ${y}${direction ? ', ' + direction : ''}`);
       }
     },
 
