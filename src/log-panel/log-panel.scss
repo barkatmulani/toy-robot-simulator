@@ -1,0 +1,10 @@
+.log-panel {
+    font-size: 14px;
+    margin-bottom: 16px;
+    
+    .output {
+        height: 300px;
+        border: 1px solid silver;
+        overflow-y: scroll;
+    }
+}

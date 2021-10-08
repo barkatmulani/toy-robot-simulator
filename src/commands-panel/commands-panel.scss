@@ -1,0 +1,25 @@
+.commands-panel {
+    margin-bottom: 24px;
+
+    .placement-panel, .buttons-panel {
+        .btn {
+            margin-bottom: 8px;
+        }
+    }
+    
+    .placement-panel {
+        margin-bottom: 12px;
+    }
+
+    label {
+        margin-bottom: 4px;
+    }
+
+    input, select {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
