@@ -9,15 +9,23 @@ import './robot.scss';
 
 export const Robot = () => {
   return (
-    <Container className="robot-simulator">
+    <Container fluid className="robot-simulator">
       <h3 className="text-center mb-4">Toy Robot Simulator</h3>
       <Row>
-        <Col sm={5}>
-          <CommandsPanel />
-          <Board />
-          <StatusPanel />
+        <Col sm={6}>
+          <Row>
+            <Col xs={12}>
+              <CommandsPanel />
+            </Col>
+            <Col lg={7} xl={6}>
+              <Board />
+            </Col>
+            <Col lg={5} xl={6}>
+              <StatusPanel />
+            </Col>
+          </Row>
         </Col>
-        <Col sm={7}>
+        <Col sm={6}>
           <LogPanel />
         </Col>
       </Row>

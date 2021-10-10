@@ -25,15 +25,15 @@ const CommandsPanel = () => {
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Row className="placement-panel">
                     <h6>Placement</h6>
-                    <Col md={4}>
+                    <Col md={3}>
                         <label>x</label>
                         <input type="number" {...register('x')} />
                     </Col>
-                    <Col md={4}>
+                    <Col md={3}>
                         <label>y</label>
                         <input type="number" {...register('y')} />
                     </Col>
-                    <Col md={4}>
+                    <Col md={3}>
                         <label>Direction</label>
                         <select {...register('direction')}>
                             <option key={'a'} value=''></option>
@@ -52,22 +52,22 @@ const CommandsPanel = () => {
                 </Row>
             </Form>
             <Row className="buttons-panel">
-                <Col sm={12}>
+                <Col md={3}>
                     <Button  variant="success" aria-label="Left" onClick={() => dispatch(left())}>
                         Left
                     </Button>
                 </Col>
-                <Col sm={12}>
+                <Col md={3}>
                     <Button variant="primary" aria-label="Move" onClick={() => dispatch(move())} data-test='move-btn'>
                         Move
                     </Button>
                 </Col>
-                <Col sm={12}>
+                <Col md={3}>
                     <Button variant="success" aria-label="Right" onClick={() => dispatch(right())}>
                         Right
                     </Button>
                 </Col>
-                <Col sm={12}>
+                <Col md={3}>
                     <Button variant="secondary" aria-label="Report" onClick={() => dispatch(report())}>
                         Report
                     </Button>

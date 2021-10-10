@@ -13,19 +13,19 @@ const StatusPanel = () => {
         <Container fluid className="status-panel">
             <h5>Current Placement</h5>
             <Row>
-                <Col sm={4}>
+                <Col md={12}>
                     <Row>
                         <Col sm={12}><label>x</label></Col>
                         <Col sm={12}><input readOnly value={placement.x} /></Col>
                     </Row>
                 </Col>
-                <Col sm={4}>
+                <Col md={12}>
                     <Row>
                         <Col sm={12}><label>y</label></Col>
                         <Col sm={12}><input readOnly value={placement.y} /></Col>
                     </Row>
                 </Col>
-                <Col sm={4}>
+                <Col md={12}>
                     <Row>
                         <Col sm={12}><label>Direction</label></Col>
                         <Col sm={12}><input readOnly value={placement.direction} /></Col>

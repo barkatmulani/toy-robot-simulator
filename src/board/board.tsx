@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 
-import { EDirection, maxX, maxY, place, selectPlacement } from '../store';
+import { EDirection, maxX, maxY, selectPlacement } from '../store';
 
 import './board.scss';
 
@@ -29,8 +29,6 @@ const Board = () => {
         }
         rows.push(cols);
     }
-
-    console.log(rows)
 
     return (
         <Container fluid className="board">
