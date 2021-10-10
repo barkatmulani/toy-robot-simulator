@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 
-import { EDirection, maxX, maxY, selectPlacement } from '../store';
+import { EDirection, maxX, maxY, selectPlacement } from '../../store';
 
 import './board.scss';
 

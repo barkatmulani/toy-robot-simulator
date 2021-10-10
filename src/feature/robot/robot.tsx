@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import CommandsPanel from '../commands-panel/commands-panel';
 import LogPanel from '../log-panel/log-panel';
-import Board from '../../board/board';
+import Board from '../board/board';
 import StatusPanel from '../status-panel/status-panel';
 
 import './robot.scss';
