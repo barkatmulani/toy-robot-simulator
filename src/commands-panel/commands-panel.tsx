@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import { useForm } from 'react-hook-form';
 
-import { directions } from '../store/constants';
+import { DIRECTIONS } from '../store/constants';
 import { useAppDispatch } from '../store/hooks';
 import { EDirection } from '../store/models';
 import { move, left, right, report, place } from '../store/slices/robotSlice';
@@ -38,7 +38,7 @@ const CommandsPanel = () => {
                         <select {...register('direction')}>
                             <option key={'a'} value=''></option>
                             {
-                                directions.map((direction: EDirection, d: number) => (
+                                DIRECTIONS.map((direction: EDirection, d: number) => (
                                     <option key={d} value={direction}>{direction}</option>
                                 ))
                             }

@@ -2,7 +2,7 @@ import Enzyme from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 
 import { EDirection } from '../models';
-import { directions, maxY } from '../constants';
+import { DIRECTIONS, maxY } from '../constants';
 import robotReducer, { IRobotPlacement, place, move, left, right, IAppState, report } from './robotSlice';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
@@ -78,10 +78,10 @@ describe('robot reducer', () => {
       it('abstract', () => {
         const actual = robotReducer(initialState, left());
 
-        let index = directions.findIndex((direction: EDirection) => direction === initialState.robotPlacement.direction);
+        let index = DIRECTIONS.findIndex((direction: EDirection) => direction === initialState.robotPlacement.direction);
         index--;
-        if (index < 0) index = directions.length - 1;
-        const newDirection = directions[index];
+        if (index < 0) index = DIRECTIONS.length - 1;
+        const newDirection = DIRECTIONS[index];
 
         expect(actual.robotPlacement.direction).toEqual(newDirection);
       });
@@ -97,10 +97,10 @@ describe('robot reducer', () => {
       it('abstract', () => {
         const actual = robotReducer(initialState, right());
 
-        let index = directions.findIndex((direction: EDirection) => direction === initialState.robotPlacement.direction);
+        let index = DIRECTIONS.findIndex((direction: EDirection) => direction === initialState.robotPlacement.direction);
         index++;
-        if (index >= directions.length) index = 0;
-        const newDirection = directions[index];
+        if (index >= DIRECTIONS.length) index = 0;
+        const newDirection = DIRECTIONS[index];
 
         expect(actual.robotPlacement.direction).toEqual(newDirection);
       });

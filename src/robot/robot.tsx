@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import Board from '../board/board';
 
 import CommandsPanel from '../commands-panel/commands-panel';
 import LogPanel from '../log-panel/log-panel';
@@ -13,6 +14,7 @@ export const Robot = () => {
       <Row>
         <Col sm={5}>
           <CommandsPanel />
+          <Board />
           <StatusPanel />
         </Col>
         <Col sm={7}>

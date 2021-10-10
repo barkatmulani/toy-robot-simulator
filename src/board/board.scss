@@ -1,0 +1,15 @@
+.board {
+    margin-bottom: 24px;
+
+    table, tbody, tr, td {
+        border: 3px black solid;
+        border-style: double;
+    }
+
+    td {
+        width: 30px;
+        height: 30px;
+        font-family: sans-serif;
+        text-align: center;
+    }
+}

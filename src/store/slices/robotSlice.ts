@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { EDirection } from '../models';
-import { maxX, maxY, directions } from '../constants';
+import { maxX, maxY, DIRECTIONS } from '../constants';
 
 interface IPosition {
   x: number;
@@ -35,8 +35,8 @@ export const robotSlice = createSlice({
       if (((direction && (direction !== EDirection.NONE)) || (state.robotPlacement.direction !== EDirection.NONE)) &&
           (x >= 0) && (x <= maxX) && (y >= 0) &&
           (y <= maxY)) {
-        state.robotPlacement.x = action.payload.x;
-        state.robotPlacement.y = action.payload.y;
+        state.robotPlacement.x = parseInt(action.payload.x.toString());
+        state.robotPlacement.y = parseInt(action.payload.y.toString());
         if (action.payload.direction) state.robotPlacement.direction = action.payload.direction;
         state.log?.push(`PLACE ${x}, ${y}${direction ? ', ' + direction : ''}`);
       }
@@ -83,20 +83,20 @@ export const robotSlice = createSlice({
 
     left: (state) => {
       if (isStateValid(state)) {
-        let index = directions.findIndex((direction: EDirection) => direction === state.robotPlacement.direction);
+        let index = DIRECTIONS.findIndex((direction: EDirection) => direction === state.robotPlacement.direction);
         index--;
-        if (index < 0) index = directions.length - 1;
-        state.robotPlacement.direction = directions[index];
+        if (index < 0) index = DIRECTIONS.length - 1;
+        state.robotPlacement.direction = DIRECTIONS[index];
         state.log?.push('LEFT');
       }
     },
 
     right: (state) => {
       if (isStateValid(state)) {
-        let index = directions.findIndex((direction: EDirection) => direction === state.robotPlacement.direction);
+        let index = DIRECTIONS.findIndex((direction: EDirection) => direction === state.robotPlacement.direction);
         index++;
-        if (index >= directions.length) index = 0;
-        state.robotPlacement.direction = directions[index];
+        if (index >= DIRECTIONS.length) index = 0;
+        state.robotPlacement.direction = DIRECTIONS[index];
         state.log?.push('RIGHT');
       }
     },
