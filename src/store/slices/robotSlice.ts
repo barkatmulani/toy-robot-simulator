@@ -32,7 +32,7 @@ export const robotSlice = createSlice({
   reducers: {
     place: (state, action: PayloadAction<IRobotPlacement>) => {
       const { x, y, direction } = action.payload;
-      if (((direction !== EDirection.NONE) || (state.robotPlacement.direction !== EDirection.NONE)) &&
+      if (((direction && (direction !== EDirection.NONE) || (state.robotPlacement.direction !== EDirection.NONE))) &&
           (x >= 0) && (x <= maxX) && (y >= 0) &&
           (y <= maxY)) {
         state.robotPlacement.x = action.payload.x;
