@@ -1,5 +1,5 @@
 import React from 'react';
-import { Robot } from './robot/robot';
+import { Robot } from './feature/robot/robot';
 import './App.css';
 
 const App = () => {

@@ -4,7 +4,7 @@ import Enzyme, { mount } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import { configureStore, createStore } from '@reduxjs/toolkit';
 
-import robotReducer, { EDirection, IAppState, combinedReducers } from '../store';
+import robotReducer, { EDirection, IAppState, combinedReducers } from '../../store';
 import LogPanel from './log-panel';
 
 export const storeFactory = (initialState: any) => {

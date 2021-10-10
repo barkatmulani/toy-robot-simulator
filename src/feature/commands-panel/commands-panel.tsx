@@ -2,10 +2,10 @@ import React from 'react';
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import { useForm } from 'react-hook-form';
 
-import { DIRECTIONS } from '../store/constants';
-import { useAppDispatch } from '../store/hooks';
-import { EDirection } from '../store/models';
-import { move, left, right, report, place } from '../store/slices/robotSlice';
+import { DIRECTIONS } from '../../store/constants';
+import { useAppDispatch } from '../../store/hooks';
+import { EDirection } from '../../store/models';
+import { move, left, right, report, place } from '../../store/slices/robotSlice';
 
 import './commands-panel.scss';
 

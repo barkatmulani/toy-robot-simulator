@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Container } from "react-bootstrap"
 import { useSelector } from 'react-redux';
 
-import { selectLog } from '../store/selectors/robotSelector';
+import { selectLog } from '../../store/selectors/robotSelector';
 
 import './log-panel.scss';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from "react-bootstrap"
 import { useSelector } from 'react-redux';
 
-import { selectPlacement } from '../store/selectors/robotSelector';
+import { selectPlacement } from '../../store/selectors/robotSelector';
 
 import './status-panel.scss';
 
